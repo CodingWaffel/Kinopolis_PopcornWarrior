@@ -100,6 +100,7 @@ MonoBehaviour:
   rb: {fileID: 7784890483100191123}
   col: {fileID: -4287694886808233352}
   rotationSpeed: 50
+  impactPool: {fileID: 0}
   hitForceUp: 10
   animator: {fileID: 7193132995111544619}
   possiblePopcornSprites:
