@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1125,7 +1125,7 @@ PrefabInstance:
         type: 3}
       propertyPath: popCornPrefab2.Array.data[1]
       value: 
-      objectReference: {fileID: 5399706598250273016, guid: d0b4b0051135c0f4b9a367ae3947ac19,
+      objectReference: {fileID: 5399706598250273016, guid: f5282885685978648976566ddae358b9,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89c82b44d1dc25f48b82cf7c3cc2652a, type: 3}
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 266da4958f24adb47885023b4a4a2427, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5103980d5986624c90326245c7657fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
