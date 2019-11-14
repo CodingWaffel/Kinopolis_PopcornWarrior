@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PopCornDropper : MonoBehaviour
 {
-    [SerializeField] GameObject popCornPrefab;
+    [SerializeField] GameObject[] popCornPrefab2;
     [SerializeField] Timer timer;
     
 
@@ -18,8 +18,8 @@ public class PopCornDropper : MonoBehaviour
 
 
     IEnumerator DropPopCorn(){
-        while(counter <= Score.currentScore){
-            Instantiate(this.popCornPrefab, transform.position + new Vector3(Random.Range(-.2f, .2f), 0, 0), Quaternion.identity);
+        while(counter <= Score.currentScore * .1f){
+            Instantiate(this.popCornPrefab2[Random.Range(0, this.popCornPrefab2.Length)], transform.position + new Vector3(Random.Range(-.2f, .2f), 0, 0), Quaternion.identity);
             counter++;
             yield return new WaitForSeconds(.07f);
         }

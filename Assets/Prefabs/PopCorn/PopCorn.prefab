@@ -104,6 +104,7 @@ MonoBehaviour:
   animator: {fileID: 7193132995111544619}
   possiblePopcornSprites:
   - {fileID: 21300000, guid: 99157eb08b6437b4386c9438e04e3a2a, type: 3}
+  - {fileID: 21300000, guid: 246091933bbaa374d9fc2a9e969ef24b, type: 3}
   - {fileID: 21300000, guid: 1aecb068b0b3cfb48b862a29d72db72c, type: 3}
   maizeSprite: {fileID: 21300000, guid: d65de90f42b8e014f8360135995df4f4, type: 3}
   spriteRenderer: {fileID: 4145882618842710223}

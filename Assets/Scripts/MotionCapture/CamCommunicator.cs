@@ -41,6 +41,8 @@ namespace Evertraxx{
     public static extern float GetH();
     [DllImport("NUIY")]
     public static extern float GetW();
+    [DllImport("NUIY")]
+    public static extern float GetDuration();
 
     private static Thread thread;
 
@@ -52,7 +54,10 @@ namespace Evertraxx{
 
       if(InCapturing()) return;
 
-      Application.targetFrameRate = 60;
+      x = GetX();
+      y = GetY();
+
+      Application.targetFrameRate = 30;
       thread = new Thread(startCapturing);
       thread.Start();
       thread.IsBackground = true;
@@ -68,9 +73,9 @@ namespace Evertraxx{
       }
     }
 
-    
+    static float x, y;
       //Returns the Screen coordinates of the moving object relative to a given Camera
-    public static CapturePosition CalcMovementPosition(Camera cam){
+    public static CapturePosition CalcMovementPosition(Camera cam){  
 
       if(!InCapturing()){
         captureCheck++;
@@ -84,6 +89,14 @@ namespace Evertraxx{
       }else{
         captureCheck = 0;
       }
+
+      if(x == GetX() && y == GetY()){
+
+        return new CapturePosition(false, Vector3.zero);
+      }
+      x = GetX();
+      y = GetY();
+
 
       float xs =(float) ((cam.pixelRect.xMax*1.4*GetX()/GetW()) - cam.pixelRect.xMax*.2);
       if(xs < 0) xs = 0;

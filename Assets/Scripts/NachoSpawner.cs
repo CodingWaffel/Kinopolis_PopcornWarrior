@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class NachoSpawner : MonoBehaviour
 {
     [SerializeField] Transform leftEdge, rightEdge;
     [SerializeField] float speed = 10f, frequency, duration;
-    [SerializeField] Hitable nachoPrefab;
+    [SerializeField] PopcornPool pool;
+    
+
+    [SerializeField] AnimatedText animatedText;
+
     float nachoSpawnCounter, activeCounter;
 
     public float Duration => this.duration;
@@ -14,6 +20,7 @@ public class NachoSpawner : MonoBehaviour
     public void Activate(){
         this.activeCounter = this.duration;
         this.active = true;
+        this.animatedText.Activate();
     }
 
     // Start is called before the first frame update
@@ -38,7 +45,10 @@ public class NachoSpawner : MonoBehaviour
 
         nachoSpawnCounter -= Time.deltaTime;
         if(nachoSpawnCounter <= 0f){
-            Instantiate(this.nachoPrefab, transform.position, Quaternion.Euler(0,0,Random.Range(0, 360)));
+            Hitable nacho = this.pool.GetHitable();
+            nacho.transform.position = transform.position;
+            nacho.gameObject.SetActive(true);
+            //Instantiate(this.nachoPrefab, transform.position, Quaternion.Euler(0,0,Random.Range(0, 360)));
             nachoSpawnCounter = this.frequency;
         }
 

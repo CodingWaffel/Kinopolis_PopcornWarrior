@@ -13,7 +13,7 @@ public class AvatarFollower : CaptureBody {
     {
         if(col.gameObject.tag != "Player" && this.impactPool)
         {
-            this.impactPool.GetImpact().Init(transform.position);
+            //this.impactPool.GetImpact().Init(transform.position);
         }
     }
 

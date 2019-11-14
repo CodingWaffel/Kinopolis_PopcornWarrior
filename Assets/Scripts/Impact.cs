@@ -6,7 +6,9 @@ public class Impact : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
     public Impact Init(Vector3 position){
+        gameObject.SetActive(false);
         this.transform.position = position;
+        this.audioSource.pitch = Random.Range(.8f, 1.1f);
         gameObject.SetActive(true);
         StartCoroutine(this.Play());
         return this;

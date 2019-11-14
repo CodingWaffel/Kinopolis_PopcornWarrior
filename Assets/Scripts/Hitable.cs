@@ -8,6 +8,7 @@ public abstract class Hitable : MonoBehaviour
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected Collider2D col;
     [SerializeField] float rotationSpeed;
+    [SerializeField] ImpactPool impactPool;
 
     public int Points => this.points;
     
@@ -21,6 +22,10 @@ public abstract class Hitable : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
+        
+        if(other.tag != "Player") return;
+        
+        this.impactPool.GetImpact().Init(this.transform.position);
         this.Hit(other.gameObject);
     }
 

@@ -22,8 +22,6 @@ public class PopCorn : Hitable
     }
     protected override void Hit(GameObject other)
     {
-        if(other.tag != "Player") return;
-        
         Score.Raise(this.Points);
         this.animator.SetTrigger("Pop");
         this.spriteRenderer.sprite = this.possiblePopcornSprites[Random.Range(0, this.possiblePopcornSprites.Length)];
