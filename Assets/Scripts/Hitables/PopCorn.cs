@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopCorn : Hitable
+public class PopCorn : PhysicalHitable
 {
     [SerializeField] float hitForceUp;
     [SerializeField] Animator animator;
     [SerializeField] Sprite[] possiblePopcornSprites;
     [SerializeField] Sprite maizeSprite;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] float rotationSpeed;
 
     public override Hitable Init(Vector3 force){
         
@@ -17,7 +18,6 @@ public class PopCorn : Hitable
         this.rb.WakeUp();
         this.col.enabled = true;
         this.spriteRenderer.sprite = this.maizeSprite;
-        transform.localScale *= Random.Range(.95f, 1.05f);
         return base.Init(force);
     }
     protected override void Hit(GameObject other)
@@ -33,6 +33,10 @@ public class PopCorn : Hitable
         this.rb.AddForce(Vector3.up * this.hitForceUp);
         StartCoroutine("DeactivateAfter", 1f);
         
+    }
+
+    protected override void OnUpdate(){
+        transform.Rotate(0, 0, Time.deltaTime * this.rotationSpeed);
     }
 
     IEnumerable DeactivateAfter(float time){

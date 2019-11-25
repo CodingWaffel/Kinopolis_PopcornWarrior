@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopcornPool : MonoBehaviour
+public class KinematicHitablePool : MonoBehaviour
 {
-    public List<PhysicalHitable> hitables;
+    public List<KinematicHitable> hitables;
 
     int iterator;
 
@@ -12,8 +12,8 @@ public class PopcornPool : MonoBehaviour
         this.iterator = 0;
     }
 
-    public PhysicalHitable GetHitable(){
-        PhysicalHitable impact = this.hitables[this.iterator];
+    public KinematicHitable GetHitable(){
+        KinematicHitable impact = this.hitables[this.iterator];
         this.iterator++;
         if(this.iterator >= this.hitables.Count) this.iterator = 0;
 

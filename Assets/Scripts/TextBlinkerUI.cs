@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TextBlinker : MonoBehaviour
+public class TextBlinkerUI : MonoBehaviour
 {
-    [SerializeField] TextMeshPro blinkingText;
+    [SerializeField] TextMeshProUGUI blinkingText;
     [SerializeField] float blinkingSpeed = 1f;
     float counter;
     bool counterDir;

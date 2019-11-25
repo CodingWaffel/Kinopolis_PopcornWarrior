@@ -53,7 +53,7 @@ namespace Evertraxx{
     public static void StartCapturing(){
 
       if(InCapturing()) return;
-
+    
       x = GetX();
       y = GetY();
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Canon : MonoBehaviour
+public class PhysicalCanon : MonoBehaviour
 {
     //[SerializeField] Hitable[] hitablePrefabs;
     [SerializeField] PopcornPool popcornPool;
@@ -33,9 +33,12 @@ public class Canon : MonoBehaviour
         float y = Random.Range(this.bottom.position.y - transform.position.y, this.top.position.y - transform.position.y);
         Vector3 dir = new Vector3(x, y, 0);
         dir = dir.normalized;
-        Hitable popcorn = this.popcornPool.GetHitable();
+        PhysicalHitable popcorn = this.popcornPool.GetHitable();
         popcorn.transform.position = this.myTransform.position;
         popcorn.transform.rotation = Quaternion.Euler(0,0,Random.Range(0, 360));
+        float ScaleMod = Random.Range(.95f, 1.05f);
+        popcorn.transform.localScale *= 1f + (1f - ScaleMod);
+        popcorn.Rigidbody.mass *= ScaleMod;
         popcorn.gameObject.SetActive(true);
         popcorn.Init(dir * this.power);
         

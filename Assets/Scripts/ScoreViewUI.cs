@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-
-public class ScoreView : MonoBehaviour
+public class ScoreViewUI : MonoBehaviour
 {
-    [SerializeField] TextMeshPro scoreView;
+    [SerializeField] TextMeshProUGUI scoreView;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +16,4 @@ public class ScoreView : MonoBehaviour
     void UpdateScore(int val){
         this.scoreView.text = val.ToString();
     }
-
 }
