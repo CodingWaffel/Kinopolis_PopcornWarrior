@@ -15,4 +15,7 @@ public abstract class KinematicMovement{
         this.rigidbody = rigidbody;
     }
     public abstract bool Move();
+    public virtual bool TargetReached(){
+        return Vector3.Distance(this.RigidBody.position, this.Target) < .1f;
+    }
 }

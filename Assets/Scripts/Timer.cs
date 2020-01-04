@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] bool startOnAwake = true;
-    [SerializeField] int time = 10;
+    public int time = 10;
     [SerializeField] string targetScene = "Menu";
 
     public Trigger onTimeOver;
@@ -16,14 +15,13 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        this.timeLeft = this.time;
-        this.onTimeOver += this.TimeUp;
-        if(this.startOnAwake) this.StartTimer();
+        
     }
 
     public void StartTimer(){
         if(this.ticking) return;
-
+        this.timeLeft = this.time;
+        this.onTimeOver += this.TimeUp;
         this.ticking = true;
     }
 
@@ -40,6 +38,6 @@ public class Timer : MonoBehaviour
     }
 
     void TimeUp(){
-        SceneChanger.instance.ChangeSceneToWithoutEndCapturing(this.targetScene);
+        SceneChanger.instance.ChangeSceneTo(this.targetScene);
     }
 }

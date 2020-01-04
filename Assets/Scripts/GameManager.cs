@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Score.Reset();
+        this.timer.time = PlayerPrefsManager.GetGameDuration();
+        this.timer.StartTimer();
     }
 
     void Update() {

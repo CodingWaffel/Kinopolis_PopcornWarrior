@@ -8,11 +8,9 @@ public class StraightMovement : KinematicMovement
 
     public override bool Move()
     {
-        this.RigidBody.MovePosition(this.RigidBody.position + (this.Target - this.RigidBody.position).normalized * this.Speed * Time.deltaTime);
+        this.RigidBody.MovePosition(this.RigidBody.position + (this.Target - this.RigidBody.position).normalized * this.Speed * Time.fixedDeltaTime);
         return this.TargetReached();
     }
 
-    bool TargetReached(){
-        return Vector3.Distance(this.RigidBody.position, this.Target) < .1f;
-    }
+
 }

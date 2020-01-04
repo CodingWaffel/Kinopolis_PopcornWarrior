@@ -5,12 +5,15 @@ using UnityEngine;
 public class Impact : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
-    public Impact Init(Vector3 position){
+    [SerializeField] ParticleSystem particleSys;
+    public AudioSource Audio => this.audioSource;
+    public ParticleSystem Particles => this.particleSys;
+    public virtual Impact Init(Transform position){
         gameObject.SetActive(false);
-        this.transform.position = position;
+        this.transform.position = position.position;
         this.audioSource.pitch = Random.Range(.8f, 1.1f);
         gameObject.SetActive(true);
-        StartCoroutine(this.Play());
+        StartCoroutine(this.Play(position));
         return this;
     }
 
@@ -18,10 +21,15 @@ public class Impact : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    IEnumerator Play(){
-        while(this.audioSource.isPlaying){
-            yield return new WaitForSeconds(.1f);
-        }
+    protected virtual IEnumerator Play(Transform target){
+        if(this.audioSource)
+            while(this.audioSource.isPlaying){
+                yield return new WaitForSeconds(.1f);
+            }
+        if(this.particleSys)
+            while(this.particleSys.IsAlive()){
+                yield return new WaitForSeconds(.1f);
+            }
         this.End();
     }
 }

@@ -7,6 +7,6 @@ public class GameStarter : MenuElement
 {
     public override void Activate()
     {
-        SceneChanger.instance.ChangeSceneToWithoutEndCapturing("Game");
+        SceneChanger.instance.ChangeSceneTo("Game");
     }
 }

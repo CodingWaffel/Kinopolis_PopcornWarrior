@@ -22,7 +22,7 @@ public abstract class Hitable : MonoBehaviour
         
         if(other.tag != "Player") return;
         
-        this.impactPool.GetImpact().Init(this.transform.position);
+        this.impactPool.GetImpact().Init(this.transform);
         this.Hit(other.gameObject);
     }
 

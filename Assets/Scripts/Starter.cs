@@ -29,6 +29,14 @@ public class Starter : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             Application.Quit();
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftArrow)){
+            SceneChanger.instance.ChangeSceneTo(this.sceneTwo);
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow)){
+            SceneChanger.instance.ChangeSceneTo(this.sceneOne);
+            
+        }
     }
 
     void Count(){
@@ -46,9 +54,9 @@ public class Starter : MonoBehaviour
 
     void StartGame(){
         if(this.gameChooseCounter > .5f){
-            SceneChanger.instance.ChangeSceneToWithoutEndCapturing(this.sceneOne);
+            SceneChanger.instance.ChangeSceneTo(this.sceneOne);
         }else{
-            SceneChanger.instance.ChangeSceneToWithoutEndCapturing(this.sceneTwo);
+            SceneChanger.instance.ChangeSceneTo(this.sceneTwo);
 
         }
     }

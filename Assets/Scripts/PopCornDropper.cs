@@ -23,6 +23,7 @@ public class PopCornDropper : MonoBehaviour
             counter++;
             yield return new WaitForSeconds(.07f);
         }
+        this.timer.time = PlayerPrefsManager.GetScoreDuration();
         this.timer.StartTimer();
     }
 }

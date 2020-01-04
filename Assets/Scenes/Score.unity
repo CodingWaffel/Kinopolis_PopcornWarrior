@@ -353,7 +353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe0093f4d8bbd146884910d4a376cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOnAwake: 0
   time: 5
   targetScene: Menu
 --- !u!4 &222475574
@@ -1271,7 +1270,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.4
+  orthographic size: 3.8432298
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

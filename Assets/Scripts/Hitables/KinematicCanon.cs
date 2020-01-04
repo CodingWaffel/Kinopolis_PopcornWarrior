@@ -7,6 +7,7 @@ public class KinematicCanon : MonoBehaviour
     [SerializeField] KinematicHitablePool hitablePool;
     [SerializeField] float spawnTimeMin, spawnTimeMax, initialSpeed;
     [SerializeField] Transform target;
+    [SerializeField] bool flipSprite;
 
     Transform myTransform;
 
@@ -33,13 +34,21 @@ public class KinematicCanon : MonoBehaviour
         Vector3 dir = new Vector3(x, y, 0);
 
         KinematicHitable hitable = this.hitablePool.GetHitable();
+        //SpriteRenderer rend = hitable.GetComponent<SpriteRenderer>();
+        //if(rend) rend.flipX = this.flipSprite;
+
+        if(this.flipSprite){
+            hitable.transform.rotation = Quaternion.Euler(0,180,0);
+        }else{
+            hitable.transform.rotation = Quaternion.Euler(0,0,0);
+        }
 
         hitable.transform.position = this.myTransform.position;
         
         float ScaleMod = Random.Range(.95f, 1.05f);
         hitable.transform.localScale *= 1f + (1f - ScaleMod);
         hitable.gameObject.SetActive(true);
-        hitable.Init(new KinematicMovement[]{new StraightMovement(this.initialSpeed, dir, hitable.Rigidbody), new NoMovement(this.initialSpeed, dir, hitable.Rigidbody)});
+        hitable.Init(this.initialSpeed, dir, hitable.Rigidbody);
         
     }
 }
