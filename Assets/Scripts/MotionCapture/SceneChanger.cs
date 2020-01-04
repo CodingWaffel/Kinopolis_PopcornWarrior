@@ -27,8 +27,4 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
     }
 
-	void OnApplicationQuit(){
-		Evertraxx.CamCommunicator.EndCapturing();
-	}
-
 }
