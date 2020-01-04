@@ -67,16 +67,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369721498028513836, guid: bbd86e81186dff744a52d5a172b9793a,
+        type: 3}
+      propertyPath: impactPool
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1958642286902599816, guid: bbd86e81186dff744a52d5a172b9793a,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 86c6a337e445cc540a25c2d5eb5ca858,
         type: 3}
-    - target: {fileID: 7369721498028513836, guid: bbd86e81186dff744a52d5a172b9793a,
-        type: 3}
-      propertyPath: impactPool
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbd86e81186dff744a52d5a172b9793a, type: 3}

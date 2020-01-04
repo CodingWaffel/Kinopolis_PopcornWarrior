@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7195990792479967480, guid: f52523849c949fb4ea4634b24ab72454,
         type: 3}
       propertyPath: m_Name
-      value: SideKickSpaceShip
+      value: SideKickSpaceShip Variant 2
       objectReference: {fileID: 0}
     - target: {fileID: 2746678945459488903, guid: f52523849c949fb4ea4634b24ab72454,
         type: 3}
