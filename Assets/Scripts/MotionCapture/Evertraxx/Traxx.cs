@@ -20,7 +20,11 @@ namespace Evertraxx{
         Mat imageF, image, frameSub, frame0, ch, frameIn;
         int firstFlg;
         List<Mat> channels;
+        /*
+            classic/old: coef = 3.6, stab = 200, sens = 3
+            newer recommendation: coef = 5.5, stab = 5, sens = 1
 
+        */
         [SerializeField] float coef = 5.5f;
         [SerializeField] int stab = 5;
         [SerializeField] int sens = 5;

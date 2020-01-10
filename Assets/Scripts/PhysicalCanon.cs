@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PhysicalCanon : MonoBehaviour
 {
+    public static float speedModifier = 1f;
     //[SerializeField] Hitable[] hitablePrefabs;
     [SerializeField] PopcornPool popcornPool;
     [SerializeField] float spawnTimeMin, spawnTimeMax, power;
@@ -19,7 +20,7 @@ public class PhysicalCanon : MonoBehaviour
     }
 
     void Update(){
-        this.counter -= Time.deltaTime;
+        this.counter -= Time.deltaTime * speedModifier;
 
         if(this.counter <= 0){
             this.Fire();

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,5 +19,6 @@ public class NachoSpecial : PhysicalHitable
         Score.Raise(this.Points);
         gameObject.SetActive(false);
     }
+
 
 }

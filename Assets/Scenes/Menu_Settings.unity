@@ -317,9 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0550453b8e9314f88827665713b914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 426581559}
-  textMesh: {fileID: 1706131733}
-  displayValue: 3
 --- !u!1 &142893046
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,9 +441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0550453b8e9314f88827665713b914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1204990205}
-  textMesh: {fileID: 854569686}
-  displayValue: 0
 --- !u!1 &253854487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,18 +1049,7 @@ MonoBehaviour:
   m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &484962463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,18 +1366,7 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &642470275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,18 +2673,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1084814876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,9 +3091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0550453b8e9314f88827665713b914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1315721656}
-  textMesh: {fileID: 321290676}
-  displayValue: 1
 --- !u!1 &1145056599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,9 +3599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0550453b8e9314f88827665713b914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1594204063}
-  textMesh: {fileID: 1868434341}
-  displayValue: 2
 --- !u!1 &1287738848
 GameObject:
   m_ObjectHideFlags: 0

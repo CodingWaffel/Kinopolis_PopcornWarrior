@@ -8,7 +8,7 @@ public class SingleSceneStarter : MonoBehaviour
     public float time;
 
 
-    void Start(){
+    void Awake(){
         this.time = (float)PlayerPrefsManager.GetStartDuration();
     }
     void Update(){

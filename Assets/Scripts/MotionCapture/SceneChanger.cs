@@ -27,4 +27,9 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
     }
 
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
+
 }
