@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Score.Reset();
+        PhysicalCanon.speedModifier = 1f;
         this.timer.time = PlayerPrefsManager.GetGameDuration();
         this.timer.RegisterTimeEvent(this.timer.time * .5f, this.InitGesture);
         this.timer.StartTimer();
